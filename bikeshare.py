@@ -245,7 +245,8 @@ def main():
 
 
     while(1):
-    	print('This is version 2.0.0 \n')
+    	print('This is version 2.1.0 \n')
+    	print('Unfortunately,the only available city at the moment is Chicago.\n')
         city, month, day = get_filters()
         df = load_data(city, month, day)
 

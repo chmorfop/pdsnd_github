@@ -11,5 +11,5 @@ This project is about Bikeshare Users,who use the company's bicycles to ride wit
 The necessary files for this project are chicago.csv,new_york_city.csv,washington.csv whicah are not uploaded on Github.But only a version of chicago.csv is available on Github through chicago.tar.gz
 
 ### Credits
-Proper credits to https://stackoverflow.com/ for valuable info.
+Proper credits to https://stackoverflow.com/ and to https://pandas.pydata.org/ for the valuable info.
 
