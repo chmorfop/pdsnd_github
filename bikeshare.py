@@ -243,7 +243,9 @@ def main():
 	tf = tarfile.open("chicago.tar.gz")
     tf.extractall()
 
+
     while(1):
+    	print('This is version 2.0.0 \n')
         city, month, day = get_filters()
         df = load_data(city, month, day)
 
