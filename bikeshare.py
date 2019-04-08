@@ -122,7 +122,8 @@ def time_stats(df):
 
     print('and the most common month is ' + (str(final_month).title()) +'.\tObservations:' +str(temp[0])  + '\n')
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    timediff=time.time() - start_time
+    print("\nThis took {} seconds.".format(timediff))
     print('-'*40)
 
 
@@ -157,7 +158,8 @@ def station_stats(df):
 
 
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    timediff=time.time() - start_time
+    print("\nThis took {} seconds.".format(timediff))
     print('-'*40)
 
 
@@ -180,8 +182,9 @@ def trip_duration_stats(df):
 
     print('The Total Trip Duration is {} hour(s). \n'.format(sum))
     print('The Average Trip Duration is {} hour(s). \n'.format(sum/(t1.count())))
-
-    print("\nThis took %s seconds." % (time.time() - start_time))
+    
+    timediff=time.time() - start_time
+    print("\nThis took {} seconds.".format(timediff))
     print('-'*40)
 
 
@@ -197,7 +200,7 @@ def user_stats(df,city):
     temp=df['User Type'].value_counts()
     for i in vlist:
         print(i+": "+ str(temp[i]))
-
+ 
 
     # Display counts of gender & earliest, most recent, and most common year of birth (ONLY FOR NYC AND CHICAGO)
     if(city=='new york city' or city=='chicago'):
@@ -212,7 +215,9 @@ def user_stats(df,city):
         print('The most recent year of Birth is {}.'.format(int(df['Birth Year'].max())))
         print('The most common year of Birth is {}.'.format(int(df['Birth Year'].mode()[0])))
 
-    print("\nThis took %s seconds." % (time.time() - start_time))
+
+    timediff=time.time() - start_time
+    print("\nThis took {} seconds.".format(timediff))
     print('-'*40)
 
 
@@ -230,7 +235,7 @@ def display_data(df):
             string = fir_string.lower()
 
         if string in ('yes', 'y'):
-            flag=1
+            flag=1 
             print(df.iloc[f_index:s_index])
             f_index=s_index
             s_index=s_index+5
@@ -240,7 +245,7 @@ def display_data(df):
 
 
 def main():
-	tf = tarfile.open("chicago.tar.gz")
+    tf=tarfile.open("chicago.tar.gz")
     tf.extractall()
 
     while(1):
